@@ -1,0 +1,23 @@
+<app-custom-modal modalTitle="Notícias" class="news">
+  <div slot="modal-content">
+    <div class="news__container">
+      <div class="news__container--content" [hidden]="!(news$ | async)?.length">
+        <app-card-news
+          class="news__card"
+          *ngFor="let news of news$ | async"
+          [news]="news"
+        ></app-card-news>
+
+        <mat-paginator [pageSizeOptions]="[3]"></mat-paginator>
+      </div>
+
+      <div [hidden]="(news$ | async)?.length">
+        <mat-spinner></mat-spinner>
+      </div>
+    </div>
+  </div>
+
+  <div slot="modal-actions">
+    <button mat-raised-button color="primary" mat-dialog-close>Fechar</button>
+  </div>
+</app-custom-modal>

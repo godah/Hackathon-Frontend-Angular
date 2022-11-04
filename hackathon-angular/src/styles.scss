@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+a,
+a:visited,
+a:hover {
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #125699;
+}
+
+.mat-share {
+  background-color: #25d366;
+  color: white !important;
+}
+
+.mat-like {
+  background-color: #3360ff;
+  color: white !important;
+}

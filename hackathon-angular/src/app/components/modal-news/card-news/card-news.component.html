@@ -1,0 +1,14 @@
+<div class="card-news">
+  <div class="card-news__header">
+    <div class="card-news__header--title">{{ news.titulo }}</div>
+    <div class="card-news__header--date">
+      {{ news.data_publicacao | date: "dd/MM/yyyy HH:mm" }}
+    </div>
+  </div>
+  <div class="card-news__body">
+    <div>{{ news.introducao }}</div>
+    <div class="card-news__body--link">
+      <a [href]="news.link" target="_blank">Ler mais...</a>
+    </div>
+  </div>
+</div>

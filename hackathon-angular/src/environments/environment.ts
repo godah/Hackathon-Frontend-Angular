@@ -3,7 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  language: 'pt-BR',
+};
+
+export const APIS = {
+  ibge: 'http://servicodados.ibge.gov.br/api/v3/noticias/?busca=sustentabilidade',
 };
 
 /*

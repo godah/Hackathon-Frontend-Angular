@@ -1,0 +1,49 @@
+.toolbar {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #1976d2;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+
+  &__side {
+    display: flex;
+    align-items: center;
+
+    .spacer {
+      flex: 1;
+    }
+  }
+
+  img {
+    margin: 0 16px;
+  }
+
+  #twitter-logo {
+    height: 40px;
+    margin: 0 8px;
+  }
+
+  #news-logo {
+    height: 30px;
+    margin: 0 8px;
+  }
+
+  #youtube-logo {
+    height: 40px;
+    margin: 0 16px;
+  }
+
+  #twitter-logo:hover,
+  #news-logo:hover,
+  #youtube-logo:hover {
+    opacity: 0.8;
+  }
+}

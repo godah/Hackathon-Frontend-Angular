@@ -11,6 +11,7 @@ import { CardService } from './services/card.service';
 export class AppComponent {
   title = 'hackathon-angular';
   companies: Company[] = [];
+  exibirObjetivosOD: boolean = false;
 
   constructor(private cardService: CardService) { }
 
@@ -20,5 +21,5 @@ export class AppComponent {
 
   getCompanies(): void{
     this.companies = this.cardService.getCompanies();
-  }
+  } 
 }

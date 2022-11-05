@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 mat-dialog-title>>>> Notícias</h2>
+  <mat-dialog-content class="item">
+    <div class="card-body"
+          *ngFor="let noticia of noticias; 
+          index as i; first as isFirst" >
+      <app-noticia [noticia]="noticia"></app-noticia>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Fechar</button>  
+  </mat-dialog-actions>
+</div>

@@ -1,0 +1,20 @@
+.container{
+  display: flex;  
+  flex-direction: column;
+  height: 80vh;
+  width: 60vw;
+}
+
+.item{
+  height: auto;
+  width: auto
+}
+
+.example-card {
+  max-width: 400px;
+  height: 400px;
+  overflow-y: scroll;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

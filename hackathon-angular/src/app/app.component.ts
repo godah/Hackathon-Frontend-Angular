@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { debounceTime } from 'rxjs/operators';
 import { Company } from 'src/models/company';
+import { ModalNoticiaComponent } from './modal-noticia/modal-noticia.component';
 import { CardService } from './services/card.service';
 
 
@@ -19,7 +21,8 @@ export class AppComponent {
   
   constructor(
     private cardService: CardService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder,
+    private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.companies = this.getCompanies();
@@ -47,5 +50,9 @@ export class AppComponent {
       function(company:Company) {  
         return company.name.toLowerCase().includes(filtro.toLowerCase());  
     });
+  }
+
+  abrirModal(): void{
+    this.dialog.open(ModalNoticiaComponent);
   }
 }

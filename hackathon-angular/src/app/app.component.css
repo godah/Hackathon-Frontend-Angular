@@ -364,4 +364,9 @@
     100% {
         opacity: 0;
     }
-}
+  }
+
+  .center{
+    display: grid;
+    place-items: center;    
+  }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { debounceTime } from 'rxjs/operators';
 import { Company } from 'src/models/company';
 import { CardService } from './services/card.service';
 
@@ -13,13 +15,37 @@ export class AppComponent {
   companies: Company[] = [];
   exibirObjetivosOD: boolean = false;
 
-  constructor(private cardService: CardService) { }
+  filtroFormGroup: FormGroup;  
+  
+  constructor(
+    private cardService: CardService,
+    private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
-    this.getCompanies();
+    this.companies = this.getCompanies();
+
+    this.filtroFormGroup = this.formBuilder.group({
+      filtroControl: ''      
+    });  
+    this.filtraEmpresas();
   }
 
-  getCompanies(): void{
-    this.companies = this.cardService.getCompanies();
+  getCompanies(): Company[]{
+    return this.cardService.getCompanies();
   } 
+
+  filtraEmpresas(): void {    
+    this.filtroFormGroup.get('filtroControl').valueChanges
+    .pipe(debounceTime(400))
+    .subscribe((value: string) => {      
+      this.exibeEmpresas(value);
+    });
+  }
+
+  exibeEmpresas(filtro: string): void {
+    this.companies = this.getCompanies().filter(
+      function(company:Company) {  
+        return company.name.toLowerCase().includes(filtro.toLowerCase());  
+    });
+  }
 }

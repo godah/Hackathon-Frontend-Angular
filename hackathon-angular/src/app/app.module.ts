@@ -9,11 +9,12 @@ import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { CardService } from './services/card.service';
 import { HttpErrorHandler } from './http-error-handler.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent    
   ],
   imports: [
     BrowserModule,
@@ -21,6 +22,7 @@ import { HttpErrorHandler } from './http-error-handler.service';
     BrowserAnimationsModule,
     HttpClientModule,
     MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [CardService, HttpErrorHandler],
   bootstrap: [AppComponent]

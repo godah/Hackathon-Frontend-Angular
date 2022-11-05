@@ -49,9 +49,18 @@
     </svg>
 
   </div>
-
   
-  <h2>Empresas</h2>
+  <div class="center"> 
+    <h2>Empresas</h2>  
+    <form autocomplete="off" novalidate [formGroup]="filtroFormGroup">
+      <input
+        formControlName="filtroControl"        
+        type="text"
+        placeholder="Filtrar empresa"
+      />      
+    </form>
+  <div>
+  
   <span></span>
 
   <div class="card-area">

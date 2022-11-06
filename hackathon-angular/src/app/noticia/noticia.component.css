@@ -1,0 +1,10 @@
+.noticia-card {    
+  display: flex;  
+  flex-direction: column;
+  margin: 10px 40px;
+  width:fit-content;  
+}
+
+.corpo-noticia{
+  margin-left: 15px;
+}

@@ -3,18 +3,11 @@
   flex-direction: column;
   height: 80vh;
   width: 60vw;
+  background-color:whitesmoke;  
+  padding: 20px; 
 }
 
-.item{
-  height: auto;
-  width: auto
-}
-
-.example-card {
-  max-width: 400px;
-  height: 400px;
-  overflow-y: scroll;
-  overflow: hidden;
+.items{  
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 }

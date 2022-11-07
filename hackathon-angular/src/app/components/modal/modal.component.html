@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>{{data.name}}</h1>
+<div mat-dialog-content class="modal-content">
+  <div>
+    <img src="{{data.img}}" alt="logo {{data.name}}" class="img-company">
+  </div>
+  <div>
+    <mat-list class="list-description" *ngFor="let item of data.objetivosOds">
+      <mat-list-item mat-line> {{item.descricao}}</mat-list-item>
+    </mat-list>
+  </div>
+</div>
+<div mat-dialog-actions class="modal-action">
+  <button mat-button mat-dialog-close cdkFocusInitial class="modal-action-btn" >Ok</button>
+</div>

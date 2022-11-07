@@ -1,0 +1,21 @@
+<h1 mat-dialog-title>IBGE News</h1>
+<div class="modal-content">
+  <mat-list class="list-description" *ngFor="let item of data">
+    <mat-list-item mat-line class="list-item">
+      <h3 matLine>{{item.titulo }}</h3>
+      <p matLine>
+        <span *ngIf="item.data_publicacao">
+          <b>Data Publicacao: </b> {{item.data_publicacao | FormatDate }}
+        </span> <br>
+        <span>
+          <b>Introdução: </b> {{item.introducao }}
+        </span> <br>
+        <a href="{{item.link}}" target="_blank">Saiba Mais</a>
+      </p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
+<div mat-dialog-actions class="modal-action">
+  <button mat-button mat-dialog-close cdkFocusInitial class="modal-action-btn">Ok</button>
+</div>

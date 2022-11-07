@@ -1,0 +1,22 @@
+.img-company {
+  width: 100%;
+  height: auto;
+  margin: 10px auto 20px;
+  display: block;
+}
+.modal-content {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-between !important;
+}
+.list-description {
+  display: grid !important;
+  grid-template-rows: auto auto !important;
+  grid-gap: 11px !important;
+}
+.modal-action {
+  justify-content: center;
+}
+.modal-action-btn {
+  width: 100px;
+}

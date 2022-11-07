@@ -297,6 +297,15 @@
       display: none;
       visibility: hidden;
     }
+    .card-area {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+    .content {
+      display: flex;
+    }
   }
 
   .card-body{
@@ -308,7 +317,6 @@
   .card-area {
     width: 100%;
   }
-
   .dica-news {
     font-weight: bold;
     color: black;

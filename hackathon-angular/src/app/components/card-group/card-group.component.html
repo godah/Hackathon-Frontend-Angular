@@ -1,0 +1,10 @@
+<div class="card-area">
+  <div class="card-hearder">
+    <input type="text" [(ngModel)]="filterText" class="form-control cad-search" placeholder="Filter...">
+  </div>
+  <div class="card-body paddingCard"
+        *ngFor="let company of companies | filterCompaniesPipe: filterText ;
+        index as i; first as isFirst ">
+    <app-card [company]="company"></app-card>
+  </div>
+</div>

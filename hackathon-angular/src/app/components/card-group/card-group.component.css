@@ -1,0 +1,9 @@
+.card-hearder {
+  display: flex;
+  justify-content: center;
+}
+
+.card-hearder input{
+  width: 50%;
+  font-size: 20px;
+}

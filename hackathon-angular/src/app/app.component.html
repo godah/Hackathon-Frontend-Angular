@@ -7,8 +7,7 @@
   />
   <span>Welcome</span>
     <div class="spacer"></div>
-    <span class="arrow-highlight dica-news">Icone Notícias >>></span>
-    <a aria-label="Sustentabilidade Notícias" target="_blank" rel="noopener" title="Notícias">
+    <a aria-label="Sustentabilidade Notícias" class="mat-button" target="_blank" rel="noopener" title="Notícias" (click)="getModalNoticias()">
       <img src="../assets/images/icons/news.svg" id="news-logo" alt="Notícias"/>
     </a>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
@@ -50,19 +49,10 @@
 
   </div>
 
-  
+
   <h2>Empresas</h2>
   <span></span>
-
-  <div class="card-area">
-    <div class="card-body" 
-          *ngFor="let company of companies; 
-          index as i; first as isFirst">
-      <app-card [company]="company"></app-card>
-    </div>
-  </div>
-
-
+  <app-card-group [companies]="companies"></app-card-group>
 
   <!-- Footer -->
   <footer>

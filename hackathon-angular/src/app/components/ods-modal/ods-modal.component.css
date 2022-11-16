@@ -1,0 +1,12 @@
+.mat-dialog-title{
+  font-size: 1.9rem;
+}
+
+.mat-dialog-content{
+  font-size: 1.4rem;
+    padding: 0.4rem;
+}
+
+button{
+  font-size: 1.1rem;
+}

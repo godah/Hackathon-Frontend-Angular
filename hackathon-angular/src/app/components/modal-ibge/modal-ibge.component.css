@@ -1,0 +1,20 @@
+.modal-action {
+  justify-content: center;
+}
+.modal-action-btn {
+  width: 100px;
+}
+.list-item {
+  margin-top: 20px;
+  /* border: 1px black solid; */
+  margin-bottom: 20px;
+}
+p {
+  margin: 25px;
+  overflow: hidden;
+  width: 60%;
+}
+.modal-content{
+  overflow-y: scroll;
+  height: 88%;
+}

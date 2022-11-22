@@ -1,0 +1,18 @@
+.example-card {
+    max-width: 400px;
+    
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+  
+  .company-img{
+    max-width: 280px;
+    max-height: 200px;
+  }
+
+  .img-container{
+    height: 200px;
+    text-align: -webkit-center;
+  }

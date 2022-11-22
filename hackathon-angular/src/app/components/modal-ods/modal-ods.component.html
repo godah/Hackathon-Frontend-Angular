@@ -1,0 +1,10 @@
+<app-custom-modal [modalTitle]="'ODs ' + companyName" class="ods">
+  <div slot="modal-content">
+    <div *ngFor="let goal of goals; let index = index" class="ods__goal-line">
+      {{ goal.descricao }}
+    </div>
+  </div>
+  <div slot="modal-actions">
+    <button mat-raised-button color="primary" mat-dialog-close>Fechar</button>
+  </div>
+</app-custom-modal>

@@ -1,0 +1,20 @@
+<div class="custom-modal">
+  <div class="custom-modal__header">
+    <h3 mat-dialog-title>{{ modalTitle }}</h3>
+    <i
+      *ngIf="!hideCloseButton"
+      class="material-icons custom-modal__header--close-button"
+      mat-dialog-close
+    >
+      close
+    </i>
+  </div>
+
+  <div mat-dialog-content class="custom-modal__body" align="center">
+    <ng-content select="[slot=modal-content]"></ng-content>
+  </div>
+
+  <div class="modal-actions" mat-dialog-actions align="center">
+    <ng-content select="[slot=modal-actions]"></ng-content>
+  </div>
+</div>

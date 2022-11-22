@@ -1,0 +1,11 @@
+<form [formGroup]="searchForm">
+  <mat-form-field>
+    <input
+      matInput
+      type="text"
+      formControlName="companyName"
+      autocomplete="off"
+      (keyup)="search.emit($event)"
+    />
+  </mat-form-field>
+</form>

@@ -8,7 +8,8 @@
   <span>Welcome</span>
     <div class="spacer"></div>
     <span class="arrow-highlight dica-news">Icone Notícias >>></span>
-    <a aria-label="Sustentabilidade Notícias" target="_blank" rel="noopener" title="Notícias">
+    <a aria-label="Sustentabilidade Notícias" target="_blank" rel="noopener" title="Notícias"
+      (click)="abrirModal()">
       <img src="../assets/images/icons/news.svg" id="news-logo" alt="Notícias"/>
     </a>
     <a aria-label="Angular on twitter" target="_blank" rel="noopener" href="https://twitter.com/angular" title="Twitter">
@@ -49,20 +50,26 @@
     </svg>
 
   </div>
-
-  
-  <h2>Empresas</h2>
+    
+  <h2>Empresas</h2>  
+  <form autocomplete="off" novalidate [formGroup]="filtroFormGroup">
+    <input
+      formControlName="filtroControl"        
+      type="text"
+      placeholder="Filtrar empresa"
+    />      
+  </form>
+    
   <span></span>
 
   <div class="card-area">
-    <div class="card-body" 
+    <div class="card-body"
           *ngFor="let company of companies; 
-          index as i; first as isFirst">
-      <app-card [company]="company"></app-card>
+          index as i; first as isFirst"          
+          (click)="cardEmpresa.girarCard()" >
+      <app-card #cardEmpresa [company]="company"></app-card>
     </div>
   </div>
-
-
 
   <!-- Footer -->
   <footer>

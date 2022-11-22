@@ -1,6 +1,5 @@
 .example-card {
-    max-width: 400px;
-    
+    max-width: 400px;         
   }
   
   .example-header-image {
@@ -16,3 +15,15 @@
     height: 200px;
     text-align: -webkit-center;
   }
+
+  .objetivos {
+    overflow-y: auto;     
+  }
+
+ mat-card-actions {
+  margin-top: auto;
+ } 
+
+ ul{
+  margin: 5px 0;
+ }

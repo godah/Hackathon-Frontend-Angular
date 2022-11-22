@@ -1,0 +1,10 @@
+<h2 mat-dialog-title>Lista de ODS</h2>
+
+<mat-dialog-content
+  *ngFor="let ods of data.objetivosOds; index as i; first as isFirst"
+>
+  {{ ods.descricao }}
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Fechar</button>
+</mat-dialog-actions>
